@@ -56,6 +56,11 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
           </li>
+                  {% if current_user.is_authenticated %}
+                               <li class="nav-item">
+                                   <a class="nav-item">Welcome, {{ current_user.name }}</a>
+          </li>
+        {% endif %}
         </ul>
       </div>
     </div>
